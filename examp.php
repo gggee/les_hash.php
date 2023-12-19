@@ -5,6 +5,16 @@
     define("USER", "root");
     define("PASSWORD", "");
 
+    function conn(){
+        $pdo = new PDO(
+            "mysql:host=" . HOST . ";" .
+            "dbname=" . DATABASE . ";" .
+            "charset=" . CHARSET,
+            USER,
+            PASSWORD
+        );
+    }
+    
     if (isset($_POST["email"]) && isset($_POST["password"])) {
         $salt = randString(40);
         $sql = "INSERT INTO users (salt, email, password, customerId) VALUES (?, ?, ?, ?)";
