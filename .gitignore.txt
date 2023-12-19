@@ -1,0 +1,16 @@
+# Archives
+
+*.zip
+*.rar
+*.jar
+*.7z
+
+# Logs / database
+
+*.log
+*.sql
+
+# Systems
+
+desktop.ini
+.DS_Store
